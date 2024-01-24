@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(1)
+  let [count, setCount] = useState(1)
   const addByOne = () =>{
-    setCount(count+1);
+      setCount(count+1);
+
   }
  const decreaseByOne  = () =>{
-  setCount(count-1);
+  if(count<=0) setCount(0);
+  else setCount(count-1);
  }
 
   return (
